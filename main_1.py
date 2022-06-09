@@ -77,9 +77,9 @@ if st.button("Cek NIK"):
         else:
             st.write("NIK nasabah terdaftar di database dan statusnya normal, transaksi bisa dilanjutkan.")
     else:
-        st.write("Anda bukan nasabah kami, yuk nabung disini dan jadilah nasabah kami. Dapatkan bermacam promo menarik dan daftarkan kartu kredit anda")
+        st.write("NIK anda tidak terdaftar atau anda bukan nasabah kami, yuk nabung disini dan jadilah nasabah kami. Dapatkan bermacam promo menarik dan daftarkan kartu kredit anda")
 
-nik = st.text_input("NIK")
+nik = st.text_input("Jika anda NIK tidak terbaca silahkan masukan NIK secara manual :")
 if st.button("Check NIK"):
     if nik in df['id'].values:
         if len(df[(df['id']==nik) & (df['is_fraud'] == 1)].id.values)>0:

@@ -1,0 +1,7 @@
+streamlit
+requests
+scikit-learn==1.0.2
+pandas
+opencv-python-headless
+pytesseract
+numpy

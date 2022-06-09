@@ -64,7 +64,8 @@ if upload is not None:
 # database dummy
 data  = [['3474140209790001', 111, 8, 'fraud_Haley, Batz and Auer', 'health_fitness', 'Sales professional, IT', 43, 34, 0],
 ['3474140209210001', 111, 8, 'fraud_Haley, Batz and Auer', 'health_fitness', 'Sales professional, IT', 43, 34, 0],
-['2105042604959001', 780, 12, 'fraud_Metz-Boehm', 'shopping_pos', 'Furniture designer', 27, 15, 1]]
+['2105042604959001', 780, 12, 'fraud_Metz-Boehm', 'shopping_pos', 'Furniture designer', 27, 15, 1],
+['2105042504950001', 250, 98, 'fraud_Metz-Boehm', 'shopping_pos', 'Furniture designer', 27, 15, 0]]
 df  = pd.DataFrame(data, columns=['id', 'amt', 'hour_of_day', 'merchant', 'category', 'job', 'age', 'distance','is_fraud'])
 
 if st.button("Cek NIK"):
@@ -87,7 +88,7 @@ if st.button("Check NIK"):
         else:
             st.write("NIK nasabah terdaftar di database dan statusnya normal, transaksi bisa dilanjutkan.")
     else:
-        st.write("Anda bukan nasabah kami, yuk nabung di sini dan jadilah nasabah kami. Dapatkan bermacam promo menarik dan daftarkan kartu kredit anda.")
+        st.write("NIK anda tidak terdaftar atau anda bukan nasabah kami, yuk nabung di sini dan jadilah nasabah kami. Dapatkan bermacam promo menarik dan daftarkan kartu kredit anda.")
 
 
 # loading the trained model
